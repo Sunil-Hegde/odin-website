@@ -10,7 +10,7 @@ body {
 .top {
     display: flex;
     flex-direction: column;
-    background-color: #1F2937;
+    background-color: #0D0415;
     margin: 0;
     padding: 0;
 }
@@ -24,10 +24,13 @@ body {
     gap: 15px;
     color: white;
 }
-.logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #F9FAF8;
+.links a {
+    text-decoration: none;
+    color: white;
+}
+.solaris {
+    height: auto;
+    width: 350px;
     
 }
 ul {
@@ -72,7 +75,29 @@ ul {
 }
 .images {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 1250px;
+    margin: auto;
+}
+.images button {
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+}
+.images p {
+    text-align: center;
+}
+a {
+    padding: 8px;
+}
+.wiki:hover,
+button:hover {
+    background-color: lightblue;
+    border-radius: 25px;
+    cursor: pointer;
 }
 .planet img,
 .planet p {
@@ -85,6 +110,7 @@ ul {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    align-items: center;
 }
 .planet img {
     border: #3882f6 5px solid;
@@ -132,9 +158,9 @@ ul {
 }
 
 
-button {
+.signup {
     background-color: #3882f6;
-    border-radius: 5px;
+    border-radius: 25px;
     border: white 1px solid;
     color: white;
     padding: 8px 16px;
