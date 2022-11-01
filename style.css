@@ -52,6 +52,8 @@ ul {
 .milkyway {
     height: 300px;
     width: auto;
+    border: #3882f6 1px solid;
+    border-radius: 5px;
 }
 .container .text {
     max-width: 400px;
