@@ -1,391 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Notes for Everyone</title>
-        <style>
-            body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 50px;
-            margin: 0;
-            padding: 0;
-            }
-
-            .top {
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            }
-
-            .header {
-            padding: 20px;
-            }
-            #uvce {
-            margin-top: 0px;
-            background-color: #AD2817;
-            display: flex;
-            width: 100%;
-            height: 100vh;
-            background-image: url("https://preview.redd.it/pil6sk83a3ba1.png?width=960&crop=smart&auto=webp&s=e91f24963b8bb1ba1af1731665aa2af6c7424b96");
-            background-size: cover;
-            background-position: center;
-            }
-            .text{
-                
-            margin-top: 10%;
-            font-size: 30px;
-            margin-left: -850px;
-            }
-
-            .top .header,
-            .links {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            color: white;
-            }
-            .links a {
-            text-decoration: none;
-            color: white;
-            }
-            .bu {
-            height: 100px;
-            width: auto;
-            margin: auto;
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    background-color: #0D0415;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding: 20px;
+}
+.top .header,
+ .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: white;
+}
+.links a {
+    text-decoration: none;
+    color: white;
+}
+.solaris {
+    height: auto;
+    width: 350px;
     
-            }
-            ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            }
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 0;
+    margin: 100px auto;
+}
+.milkyway {
+    height: 300px;
+    width: auto;
+    border: #3882f6 1px solid;
+    border-radius: 5px;
+}
+.container .text {
+    max-width: 400px;
+}
+.container .heading {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F9FAF8;
+}
+.links li,
+.container .subtext {
+    font-size: 189x;
+    color: #E5E7EB;
+}
+
+.up .one {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+    text-align: center;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1250px;
+    margin: auto;
+}
+.images button {
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+}
+.images p {
+    text-align: center;
+}
+a {
+    padding: 8px;
+}
+.wiki:hover,
+button:hover {
+    background-color: lightblue;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.planet img,
+.planet p {
+    display: flex;
+    max-height: 200px;
+    max-width: 200px;
+    text-align: center;
+}
+.planet {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+}
+.planet img {
+    border: #3882f6 5px solid;
+    border-radius: 25px;
+}
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7Eb;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.quote .one,
+.quote .two {
+    font-size: 30px;
+    width: 600px;
+    font-weight: light;
+}
+.quote .two {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+
+.bluebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #3882f6;
+    margin: auto;
+    padding: 12px 72px;
+    border-radius: 8px;
+}
+.bluebox .one {
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+.bluebox .two {
+    color: white;
  
-            .container {
-            display: flex;
-            flex: 1;
-            justify-content: space-between;
-            align-items: center;
-            gap: 100px;
-            flex-grow: 0;
-            margin: 100px auto;
-            }
-            .campus {
-            height: 350px;
-            width: auto;
-            border: white 2px solid;
-            border-radius: 5px;
-            
-            }
-            .container .text {
-            min-width: 400px;
-            }
-            .container .heading {
-            font-size: 64px;
-            font-weight: bolder;
-            color: white;
-            }
-            .links li,
-            .container .subtext {
-            font-size: 189x;
-            color: white;
-            }
-            
-            
-            .quote {
-            display: flex;
-            flex-direction: column;
-            background-color: #E5E7Eb;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-            }
-            
-            .footer {
-            display: flex;
-            background-color: #0D0415;
-            color: white;
-            justify-content: center;
-            align-items: center;
-            max-height: 30px;
-            }
-            #services{
-            padding: 30px 0;
+}
 
-            }
-            .sub-title01{
-            font-size: 70px;
-            font-family: 'Patrick Hand', cursive;
-            }
-            .sub-title02{
-            font-size: 70px;
-            font-family: 'Patrick Hand', cursive;
-            }
-            .services-list{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 40px;
-            margin-top: 50px;
-            }
-            .services-list div{
-             background: wheat;
-            padding: 40px;
-            font-size: 13px;
-            font-weight: 300;
-            border-radius: 10px;
-            transition: background 0.5s, transform 0.5s;
-            }
-            .services-list p{
-            font-size: 20px;
-            }
-            .services-list i{
-            font-size: 50px;
-            margin-bottom: 30px;
-            }
-            .services-list div h2{
-            font-size: 30px;
-            font-weight: 500;
-            margin-bottom: 15px;
-            }
-            .services-list div a{
-            text-decoration: none;
-            color: #fff;
-            font-size: 12px;
-            margin-top: 20px;
-            display: inline-block;
-            }
-            .services-list div:hover{
-            background: #ff004f;
-            transform: translateY(-10px);
-            }
-            .services-list button {
-            padding: 10px;
-            }
-            .services-list button:hover{
-            cursor: pointer;
-            }
-            #services.container {
-                max-width: 1200px;
-            }
-            .quote{
-                margin-top: 0px;
-                background-color: #AD2817;
-                display: flex;
-                width: 94.5%;
-                height: 100vh;
-                background-image: url("https://preview.redd.it/6g63x2z7v3ba1.png?width=960&crop=smart&auto=webp&s=2cb453a2c4ff06ac622b0a5e199da35320fd02b8");
-                background-size: cover;
-                background-position: center;
-            }
-            
 
-            @media only screen and (max-width: 600px){
-
-            .quote{
-                margin-top: 0px;
-                background-color: #AD2817;
-                display: flex;
-                width: 100%;
-                height: 100vh;
-                background-image: url("https://preview.redd.it/f6e9ietj42ba1.png?width=640&crop=smart&auto=webp&s=b4696853c802a82fde51e5b1a625dd94ceaa9779");
-                background-size: cover;
-                background-position: center;
-            }
-            #uvce {
-            margin-top: 0px;
-            background-color: #AD2817;
-            display: flex;
-            width: 124%;
-            height: 100vh;
-            background-image: url("https://preview.redd.it/zdj3suzi42ba1.png?width=640&crop=smart&auto=webp&s=beadd7dfa4a7529e24607a52c366ba82e59dfd31");
-            background-size: cover;
-            background-position: center;
-            }
-        }
-            
-        </style>
-    </head>
-    <body>
-        <div class="top">
-            <div class="header">
-                <img class="bu" src="https://i.redd.it/jv64m8gyn2ba1.jpg" alt="University logo">
-            </div>
-        </div>
-        <div id="uvce">
-            <div class="container">
-                <div class="text">
-                    <p class="heading">No Fear when Notes<br> is here !!!</p>
-                    <p class="subtext">Notes and videos for students who <br> came to college for the sake <br>of attendance, just like us -_- </br>Special thanks to our seniors for these notes.</p>
-                </div>
-                <div>
-                </div>
-            </div>
-        </div>
-        <div class="up">
-            <div id="servicess">
-                <div class="contaniner">
-                    <h1 class="sub-title02">Notes</h1>
-                    <div class="services-list">
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>PPS</h2>
-                        <a href="https://drive.google.com/drive/folders/1M14FQdcDGtpRUg17_qHyUCTJyBOktsY9" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/19KH1MaacFJGxZ30XurB3Qu9QqZRJWWfh" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>PPS Lab</h2>
-                        <a href="https://drive.google.com/drive/folders/1chjqoV-O0BccPbpjZURYJDZX-YUKvGPG" target="_blank" rel="noopener noreferrer"><button><strong>Manual</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Electrical Engg.</h2>
-                        <a href="https://drive.google.com/drive/folders/17UdpNF6aEW3hn5OLBbFhoYjzwL5muUu1" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/1dQPfJl87L4M-Z6Y0a6DGT9PehfUi5GGB" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Electrical Engg. Lab</h2>
-                        <a href="https://drive.google.com/drive/folders/1sFFJbUXEu6HAQUBxNttn1l412pzdVt7H" target="_blank" rel="noopener noreferrer"><button><strong>Manual</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Principles Of Electronics</h2>
-                        <a href="https://drive.google.com/drive/folders/1RSIygpgjSr_icSJwcHrQmXKi1dYfjROO" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/1XG_G-IXYRwzQYpXobUUp6zKtQ3EWE5nm" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Chemistry</h2>
-                        <a href="https://drive.google.com/drive/folders/1-AIg6RTyVaQhL-LvaHdg369Ej4dyVSbT" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/1Mf-BzNOEAUsrxik9uuTNP2dvWyIjaW1P" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Drawing</h2>
-                        <a href="https://drive.google.com/drive/folders/1Lup1ck7BM8Isb1UJJNN56jdSmOyINtqc" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/143wbNTK9xLehxtiFFIS_tljG0MtfeBoL" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Mathematics</h2>
-                        <a href="https://drive.google.com/drive/folders/1QmTROSXIjBnbSKILYXVfwb8hPwOuFr1a" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/1Txbi_4F15Z3mho7k2KsVrCMDouTloVxB" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Mechanics</h2>
-                        <a href="https://drive.google.com/drive/folders/1SQrUDPFLR_Uo8bR2aEHSKp_7Md52fXP6" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                        <a href="https://drive.google.com/drive/folders/1IQvuUmo0ZI8wCQECQowV1yXNLlFcI8TD" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Physics</h2>
-                        <a href="https://drive.google.com/drive/folders/1MlHbHj22K7yxhpaQVQdzIESPVh4F98kj" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                      </div>
-                      <div>
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>English</h2>
-                        <a href="https://drive.google.com/drive/folders/1poof1s604hvt3_GLRVQ_U5hDmZcMEj7B" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Kannada</h2>
-                        <a href="https://drive.google.com/drive/folders/1oCZ700zLESHjNMRWuMSFoWLfb952WMdD" target="_blank" rel="noopener noreferrer"><button><strong>Textbook</strong></button></a>
-                      </div>
-                      <div>
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Mechanical Engg. Sciences</h2>
-                        <a href="https://drive.google.com/drive/folders/1zubcwUC1L3VqfH5tWaE4VHnlMMVuXC5h" target="_blank" rel="noopener noreferrer"><button><strong>Notes</strong></button></a>
-                      </div>
-                      <div>
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Physics Lab</h2>
-                        <a href="https://drive.google.com/drive/folders/1sS8nBry_z0rKXpx1Vj9otkhL8owl4E3Y" target="_blank" rel="noopener noreferrer"><button><strong>Manual</strong></button></a>
-                      </div>
-                      <div>
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Woorkshop</h2>
-                        <a href="https://drive.google.com/drive/folders/1uKh1j-EKkMaA678zPUMv2GcdZpscw6D5" target="_blank" rel="noopener noreferrer"><button><strong>Manual</strong></button></a>
-                      </div>
-                      
-              
-              
-                    </div>
-                </div>
-              </div>
-              <div id="servicess">
-                <div class="contaniner">
-                    <h1 class="sub-title02">Youtube Playlist</h1>
-                    <div class="services-list">
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>PPS</h2>
-                        <a href="https://youtube.com/playlist?list=PLJ5C_6qdAvBFzL9su5J-FX8x80BMhkPy1" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Electrical Engg.</h2>
-                        <a href="https://youtube.com/playlist?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Principles Of Electronics</h2>
-                        <a href="https://youtube.com/playlist?list=PL3qvHcrYGy1uF5KAGntUITTJ85Dm3Dtdy" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Chemistry</h2>
-                        <a href="https://youtube.com/playlist?list=PLm_MSClsnwm9p_yaZ8zIW1LxkK7_n98gD" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Drawing</h2>
-                        <a href="https://youtube.com/playlist?list=PLIhUrsYr8yHwDUrVYmUNYkEeZgZTvoIfS" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Mathematics</h2>
-                        <a href="https://youtube.com/playlist?list=PLU6SqdYcYsfINU_Y9CMp1pZ827ZB1U-Xn" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                      <div>
-              
-                        <i class="fa fa-thin fa-vr-cardboard"></i>
-                        <h2>Engg. Mechanics</h2>
-                        <a href="https://youtube.com/playlist?list=PLDN15nk5uLiAyM7MbRBF1eIFC8y5vMRxI" target="_blank" rel="noopener noreferrer"><button><strong>Playlist</strong></button></a>
-                      </div>
-                </div>
-              </div>
-            
-        </div>
-        </div>
-        <div class="quote">
-
-        </div>
-        <div class="footer">
-            <p>Created by Sunil Hegde</p>
-        </div>
-    </body>
-</html>
+.signup {
+    background-color: #3882f6;
+    border-radius: 25px;
+    border: white 1px solid;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+.footer {
+    display: flex;
+    background-color: #0D0415;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
